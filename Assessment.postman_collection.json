@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "63b515cd-6bce-4d2b-a023-7c7f53b481b6",
+		"name": "Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50373705",
+		"_collection_link": "https://nishanwebcom-9008711.postman.co/workspace/Nishan-Web's-Workspace~a88ee132-1b3b-4dd1-83fd-340159806011/collection/50373705-63b515cd-6bce-4d2b-a023-7c7f53b481b6?action=share&source=collection_link&creator=50373705"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Product 10\",\r\n    \"category\" : \"Home Goods\",\r\n    \"currency_id\" : 1,\r\n    \"price\" : 100.00,\r\n    \"rating\" :3,\r\n    \"image\" : \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEVElEQVR4nO2ZWWhcVRjHLwUL4vKk+CYIgjLk3gjVUItSlFpxwX2h4oMtxT7UoiiSh1ICLuCCVKQOmXsmaZo0SYnQmEoLtiVpG2rN1iaBZpI0W7M1zdZmadY55ycn1zF3GkwyzhZw/vDBMMs3/9893znnO/caRkoppRRTpft5xhSy2BSy0xRyyrTlpGXLZkvIonSbdzwlrDfWqjwHuFubtoTi30O2WYI3jLWoklY8GblyenkAJ0xbfm9ksc5YK2oY4JWqHiZ+DcBXlZBdC4fqFd4axb4KxbajisdzlozGd8ZaUPsoT7UMMdswAFW9cK4Lfm+D0gAUNipEnWL/BUVWhWJrUThEus3rSTXfDXf2jtHTeQNahmEliC/OKJ4rDJ8TnmRO7NFp9gzegt5xWC2EHgl3OZl+3k4awNgMZ29MQ6QQ20rDRuFwwo17BA9bgs8Cw0yOz0KkEHpiWyEAWzYnHMCyZbv+8xeOKKbmIVKIn2vCAMYTDyDkRMiANh4pxMFLYXvCWMIBTCFbQgaahmA2GBmEt5Ykl5CQRSED2XUQlJFBfH56EcC0ZUHCAXRjFjLwdL6U2vRqIc50wcY8KRcBeCvhAHrzCU1kHZ+clGpergwRGILtv0nlKp8rG3zcYSRDuqt0twUfn1x+JFpHYOfxxStvOVf/VSOZ0l2l29CmQ3JOz4nLg47x4Smo7Ycfq+HJPDl3WzP3jZF0ZbHudohVhS2/XVPttO4qncPKisavpPl5zViL8pSwXjdmurexhAw4m52csGzZpN/Tq03SJmxKKf3f9VgO95u2zLaE7DFtGYxs2ZQTpuA9dz4rn7ssIc+7+qGgZctuS0ifZfNQTM1bNs+aQl6PeK13xeZ82V7YSKa/jkxvFZk7yhDLLLXjpo8tsbvyUZp/IlfxZSX8chkONyhyLip++lOxJexwvwRiYIOP+6IGcMrGSbq1WFHZDTdnnBiZguuT0D8O3TehYxRah502ov4aVPfC+W6o6HTOAMeawyG81Yof/lB8fU6xr1yxs0yRcTDsoOONGsCpSyfhhV6Ynodbc06TFg+IHcfC5s7VWADMhhJq83PB+ELsLQ8ro9moAUwhh0IJ+ydA9/zxhNjrAjBtORiLETgdSljSBEEVX4hdx8NK6FQMANgTSvh8sWJ0On4QB2oUm/IWAdIEH0UNkFHAvZYtr4WSvl+mFszGGqKwkYUL9E/5CNn/iJ97ogb4exReNoWcDyV/8Yiiqi92EN5a2FwQZn4+3c9LRiyVJthu2a7DuFB8eEJx9irM/IfV6WIf+C/Bu0eXbGDKtPnAiIcsH2+6V6XFc7Di01OK3Hoo74LAsHMXYmgKBiahbRRq+qC0GfZXwa4Tio2uWrdcq07cHz+lCR7QN6LcJRVtmELO6Zw6t5EoeXw8qB8RmUJ2RGG8Q+fQuYxkKs3Ho6bNbt27mLYsX7jhZcuRhV3cCf26XX/mfIfd+jdGSimlZESrvwA/ra3eZx++iwAAAABJRU5ErkJggg==\",\r\n    \"status\" : \"out_of_stock\"   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ENDPOINT}}/products",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"PRODUCT 1\",\r\n    \"category\" : \"Home Goods\",\r\n    \"currency_id\" : 1,\r\n    \"price\" : 1500.00,\r\n    \"rating\" : 4.5,\r\n    \"image\" : \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEVElEQVR4nO2ZWWhcVRjHLwUL4vKk+CYIgjLk3gjVUItSlFpxwX2h4oMtxT7UoiiSh1ICLuCCVKQOmXsmaZo0SYnQmEoLtiVpG2rN1iaBZpI0W7M1zdZmadY55ycn1zF3GkwyzhZw/vDBMMs3/9893znnO/caRkoppRRTpft5xhSy2BSy0xRyyrTlpGXLZkvIonSbdzwlrDfWqjwHuFubtoTi30O2WYI3jLWoklY8GblyenkAJ0xbfm9ksc5YK2oY4JWqHiZ+DcBXlZBdC4fqFd4axb4KxbajisdzlozGd8ZaUPsoT7UMMdswAFW9cK4Lfm+D0gAUNipEnWL/BUVWhWJrUThEus3rSTXfDXf2jtHTeQNahmEliC/OKJ4rDJ8TnmRO7NFp9gzegt5xWC2EHgl3OZl+3k4awNgMZ29MQ6QQ20rDRuFwwo17BA9bgs8Cw0yOz0KkEHpiWyEAWzYnHMCyZbv+8xeOKKbmIVKIn2vCAMYTDyDkRMiANh4pxMFLYXvCWMIBTCFbQgaahmA2GBmEt5Ykl5CQRSED2XUQlJFBfH56EcC0ZUHCAXRjFjLwdL6U2vRqIc50wcY8KRcBeCvhAHrzCU1kHZ+clGpergwRGILtv0nlKp8rG3zcYSRDuqt0twUfn1x+JFpHYOfxxStvOVf/VSOZ0l2l29CmQ3JOz4nLg47x4Smo7Ycfq+HJPDl3WzP3jZF0ZbHudohVhS2/XVPttO4qncPKisavpPl5zViL8pSwXjdmurexhAw4m52csGzZpN/Tq03SJmxKKf3f9VgO95u2zLaE7DFtGYxs2ZQTpuA9dz4rn7ssIc+7+qGgZctuS0ifZfNQTM1bNs+aQl6PeK13xeZ82V7YSKa/jkxvFZk7yhDLLLXjpo8tsbvyUZp/IlfxZSX8chkONyhyLip++lOxJexwvwRiYIOP+6IGcMrGSbq1WFHZDTdnnBiZguuT0D8O3TehYxRah502ov4aVPfC+W6o6HTOAMeawyG81Yof/lB8fU6xr1yxs0yRcTDsoOONGsCpSyfhhV6Ynodbc06TFg+IHcfC5s7VWADMhhJq83PB+ELsLQ8ro9moAUwhh0IJ+ydA9/zxhNjrAjBtORiLETgdSljSBEEVX4hdx8NK6FQMANgTSvh8sWJ0On4QB2oUm/IWAdIEH0UNkFHAvZYtr4WSvl+mFszGGqKwkYUL9E/5CNn/iJ97ogb4exReNoWcDyV/8Yiiqi92EN5a2FwQZn4+3c9LRiyVJthu2a7DuFB8eEJx9irM/IfV6WIf+C/Bu0eXbGDKtPnAiIcsH2+6V6XFc7Di01OK3Hoo74LAsHMXYmgKBiahbRRq+qC0GfZXwa4Tio2uWrdcq07cHz+lCR7QN6LcJRVtmELO6Zw6t5EoeXw8qB8RmUJ2RGG8Q+fQuYxkKs3Ho6bNbt27mLYsX7jhZcuRhV3cCf26XX/mfIfd+jdGSimlZESrvwA/ra3eZx++iwAAAABJRU5ErkJggg==\",\r\n    \"status\" : \"out_of_stock\"   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ENDPOINT}}/products/2",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_ENDPOINT}}/products/3",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"products",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Form Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_ENDPOINT}}/products/3",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"products",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_ENDPOINT}}/products?page=1&perPage=10",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "perPage",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "5",
+									"disabled": true
+								},
+								{
+									"key": "sortby",
+									"value": "price_desc",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "Home Goods",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_ENDPOINT}}/products/1",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"admin@mail.com\",\r\n    \"password\" : \"123\"   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ENDPOINT}}/login",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
